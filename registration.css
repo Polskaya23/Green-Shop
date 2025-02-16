@@ -1,0 +1,27 @@
+body{
+    background: greenyellow;
+}
+h1,h2,h3{
+    color: green;
+}
+.title{
+    font-size: 50px;
+    letter-spacing: 50px;
+    background: hotpink;
+}
+#second-title{
+    font-size: 100px;
+}
+[country]{
+    font-size: 100px;
+    letter-spacing: 20px;
+}
+td{
+    border: 1px solid #ccc;
+    padding: 50px;
+    text-align: center;
+    color:hotpink;
+}
+input {
+    display: block;
+}
