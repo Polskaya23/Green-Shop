@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Registration - GREENSHOP</title>
-    <link rel="stylesheet" href="./registration.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="css/registration.css">
 </head>
 <body style="font-family: Arial, sans-serif; text-align: center; padding: 20px;">
 
@@ -15,8 +17,17 @@
 <h3 data-country="Ukraine" id="third-title">Tetiana</h3>
 
 <!-- ✅ Форма начинается тут -->
-<form action="#" method="post" style="background-color: white; padding: 20px; border-radius: 10px; width: 100%; max-width: 500px; margin: 0 auto;">
-
+<form action="#" method="post" style="
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+">
     <label for="username" style="display:block; margin-bottom: 10px; font-weight: bold;">Your Name:</label>
     <input type="text" id="username" name="username" placeholder="Enter your name" required
            style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
@@ -43,6 +54,7 @@
                       font-size: 16px; cursor: pointer; border-radius: 5px;">
 
 </form> <!-- ✅ Закрыл форму -->
-
-</body>
+<footer>
+    <p>&copy; 2025 GREENSHOP. All rights reserved.</p>
+</footer>
 </html>
