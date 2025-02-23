@@ -1,31 +1,112 @@
 body {
-    background-color: white;
-}
-h1,h2,h3{
-    color: green;
-    margin: 16px;8px;
-}
-.title{
-    font-size: 50px;
-    letter-spacing: 50px;
-    background: hotpink;
-}
-h1.title{
-    color: antiquewhite;
-}
-#second-title{
-    font-size: 100px;
-}
-[country]{
-    font-size: 100px;
-    letter-spacing: 20px;
-}
-td{
-    border: 1px solid #ccc;
-    padding: 50px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    color:hotpink;
+    background-color: #f8f8f8;
 }
-input {
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.header {
+    background: #4CAF50;
+    padding: 15px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.login-btn {
+    background: white;
+    color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #4CAF50;
+    transition: 0.3s;
+}
+.login-btn:hover {
+    background: #4CAF50;
+    color: white;
+}
+.main-section {
+    padding: 50px 0;
+    background: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.text-content, .image-content {
+    display: inline-block;
+    vertical-align: middle;
+    width: 45%;
+    margin: 10px;
+    text-align: left;
+}
+.text-content h2 {
+    font-size: 32px;
+    color: #333;
+}
+.text-content p {
+    font-size: 18px;
+    color: #666;
+    margin: 15px 0;
+}
+.shop-btn {
+    display: inline-block;
+    background: green;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.shop-btn:hover {
+    background: darkgreen;
+}
+
+.image-content img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
     display: block;
+    margin: 0 auto;
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #555;
 }
