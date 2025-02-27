@@ -1,39 +1,117 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>GreenShop - Categories</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GREENSHOP</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<header class="header">
-    <h1 class="logo">GREENSHOP</h1>
-    <nav class="nav">
-        <ul>
-            <li><a href="#">Головна</a></li>
-            <li><a href="#">Магазин</a></li>
-            <li><a href="#">Догляд за рослинами</a></li>
-            <li><a href="#">Блог</a></li>
-        </ul>
-    </nav>
-    <a href="#" class="login-btn">Увійти</a>
-</header>
-<section class="main-section">
-    <div class="text-content">
-        <h2>Ласкаво просимо до GREENSHOP</h2>
-        <p>Купуйте найкращі рослини для вашого дому та створюйте затишок.</p>
-        <a href="#" class="shop-btn">Дивитися каталог</a>
+
+<div class="container">
+    <div class="top-bar">
+        <div class="nav-tabs">
+            <div class="nav-tab active">All Plants</div>
+            <div class="nav-tab">New Arrivals</div>
+            <div class="nav-tab">Sale</div>
+        </div>
+        <div class="sort-box">
+            <span>Sort by:</span>
+            <select>
+                <option value="default">Default sorting</option>
+                <option value="price_asc">Price: Low to High</option>
+                <option value="price_desc">Price: High to Low</option>
+            </select>
+        </div>
     </div>
-    <div class="image-content">
-        <img src="images/palm.png" alt="Кімнатна рослина">
+    <div class="shop-layout">
+        <aside class="sidebar">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#">House Plants</a></li>
+                <li><a href="#">Potter Plants</a></li>
+                <li><a href="#">Seeds</a></li>
+                <li><a href="#">Small Plants</a></li>
+                <li><a href="#">Big Plants</a></li>
+                <li><a href="#">Succulents</a></li>
+                <li><a href="#">Terrariums</a></li>
+                <li><a href="#">Gardening</a></li>
+                <li><a href="#">Accessories</a></li>
+            </ul>
+        </aside>
+        <div class="main-content">
+            <div class="image-container">
+                <div class="product-card">
+                    <img src="images/plant1.png" alt="Barberton Daisy">
+                    <h4 class="product-card__title">Barberton Daisy</h4>
+                    <p class="product-card__price">$119.00</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/plant2.png" alt="Angel Wing Begonia">
+                    <h4 class="product-card__title">Angel Wing Begonia</h4>
+                    <p class="product-card__price">$169.00</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/plant3.png" alt="African Violet">
+                    <h4 class="product-card__title">African Violet</h4>
+                    <p class="product-card__price">$199.00</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/plant4.png" alt="Beach Spider Lily">
+                    <h4 class="product-card__title">Beach Spider Lily</h4>
+                    <p class="product-card__price">$129.00</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/plant5.png" alt="Blushing Bromeliad">
+                    <h4 class="product-card__title">Blushing Bromeliad</h4>
+                    <p class="product-card__price">$139.00</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/plant6.png" alt="Aluminum Plant">
+                    <h4 class="product-card__title">Aluminum Plant</h4>
+                    <p class="product-card__price">$179.00</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/plant7.png" alt="Bird's Nest Fern">
+                    <h4 class="product-card__title">Bird's Nest Fern</h4>
+                    <p class="product-card__price">$99.00</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/plant8.png" alt="Broadleaf Lady Palm">
+                    <h4 class="product-card__title">Broadleaf Lady Palm</h4>
+                    <p class="product-card__price">$59.00</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/plant9.png" alt="Chinese Evergreen">
+                    <h4 class="product-card__title">Chinese Evergreen</h4>
+                    <p class="product-card__price">$39.00</p>
+                </div>
+            </div>
+            <div class="sale-banner">
+                <img src="images/sale-plant.png" alt="Sale Plant">
+                <div class="sale-content">
+                    <h2>Super Sale</h2>
+                    <p>UP TO 75% OFF</p>
+                </div>
+            </div>
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+            </div>
+
+        </div>
     </div>
-</section>
-<footer class="footer">
-    <p>&copy; 2025 GREENSHOP. Усі права захищено.</p>
-</footer>
+</div>
 
 </body>
 </html>
