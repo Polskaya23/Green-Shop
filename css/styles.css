@@ -138,3 +138,132 @@ font-family: CeraPro, sans-serif;
         width: auto;
     }
 }
+body {
+    font-family: 'Cera Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Фильтр */
+.filter-bar {
+    position: absolute;
+    top: 171px;
+    left: 105px;
+    width: 838px;
+    height: 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Меню фильтра */
+.filter-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+/* Общие стили для ссылок в меню */
+/* Общие стили для ссылок в меню */
+.filter-bar ul li {
+    position: relative;
+    display: inline-block;
+}
+
+.filter-bar ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+/* Зеленая линия (изначально скрыта) */
+.filter-bar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%; /* Сразу равна длине текста */
+    height: 2px;
+    background-color: transparent; /* Прозрачная по умолчанию */
+    transition: background-color 0.1s ease; /* Мгновенное появление */
+}
+
+/* При наведении текст становится зеленым */
+.filter-bar ul li a:hover {
+    color: #46A358;
+}
+
+/* При наведении линия мгновенно становится зеленой */
+.filter-bar ul li a:hover::after {
+    background-color: #46A358; /* Показываем линию */
+}
+
+
+/* Сортировка */
+.filter-bar select {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 14px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Контейнер для товаров */
+.product-grid {
+    position: absolute;
+    top: 225px;
+    left: 105px;
+    width: 840px;
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 33px;
+}
+
+/* Карточка товара */
+.product-card {
+    position: relative;
+    width: 258px;
+    height: 350px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Заголовки */
+.product-card h3 {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 10px 0 5px 0;
+}
+
+/* Цена */
+.product-card .price {
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #46A358;
+    margin-bottom: 10px;
+}
+
+/* Изображение товара */
+.product-card img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}}
