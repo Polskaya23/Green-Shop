@@ -88,7 +88,7 @@ font-family: CeraPro, sans-serif;
         text-align: left;
         border-radius:10px;
         overflow:hidden;
-        box-show: 0 4px 8 px rgba(0, 0, 0.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     .blog-card img {
         width:100%;
@@ -127,6 +127,7 @@ font-family: CeraPro, sans-serif;
     .blog-card {
         width: 100%;
     }
+}
     .top-section {
         flex-direction: column;
         align-items: center;
@@ -137,4 +138,182 @@ font-family: CeraPro, sans-serif;
     .btn {
         width: auto;
     }
+<<<<<<< Updated upstream
 }
+=======
+body {
+    font-family: 'CeraPro', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/* Главный контейнер */
+.products-container {
+    width: 838px;
+    position: relative; /* Чтобы `filter-bar` был относительно него */
+    padding-top: 225px; /* Оставляем место для `filter-bar` и `product-grid` */
+    margin-left: 105px; /* Делаем отступ слева 105px */
+}
+
+/* Фильтр (меню) */
+.filter-bar {
+    position: absolute;
+    top: 171px; /* Меню фиксируется на 171px */
+    width: 838px;
+    height: 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    z-index: 10;
+    padding: 5px 10px;
+}
+
+/* Меню фильтра */
+.filter-bar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-bar a {
+    text-decoration: none;
+    color: black;
+    padding: 3px 0; /* Немного отступа, чтобы линия не прилегала к тексту */
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+
+.filter-bar a:hover {
+    color: #46A358;
+    border-bottom: 2px solid #46A358; /* Зеленая линия снизу при наведении */
+}
+.filter-bar select {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+/* Контейнер товаров */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 258px);
+    grid-template-rows: 350px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 838px;
+}
+
+/* Карточка товара */
+.product-card {
+    width: 258px;          /* Размер карточки (пример) */
+    /* Высоту можешь задать или оставить auto */
+    background-color: transparent;
+    text-align: center;    /* По умолчанию содержимое будет по центру */
+    padding: 10px;         /* Внутренний отступ, если нужно */
+    margin: 0 20px;        /* Отступ между карточками */
+    box-sizing: border-box;
+}
+
+/* Изображение */
+.product-card img {
+    display: block;
+    margin: 0 auto;        /* Горизонтальное выравнивание по центру */
+    width: 250px;
+    height: 250px;
+    background-color: transparent;
+}
+
+.name, .price {
+    text-align: left;      /* Выровнять текст по левому краю */
+    margin-left: 10px;     /* Небольшой отступ слева */
+    margin-right: 10px;    /* Чтобы текст не прилипал справа */
+    box-sizing: border-box;
+}
+.name {
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.price {
+    font-size: 14px;
+    color: #46A358;        /* Зеленый цвет для цены */
+    margin-top: 3px;
+}
+.product-card {
+    position: relative;
+    width: 258px;
+    height: 350px;
+    background: transparent;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Эффект увеличения карточки при наведении */
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* Стили для блока с иконками */
+.product-icons {
+    display: flex;
+    justify-content: center;  /* Центрируем иконки */
+    gap: 10px;  /* Расстояние между иконками */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.product-icons img {
+    width: 24px; /* Размер иконок */
+    height: 24px;
+    cursor: pointer; /* Добавляем курсор */
+    transition: transform 0.3s ease; /* Анимация */
+}
+
+.product-icons img:hover {
+    transform: scale(1.2); /* Увеличение при наведении */
+}
+}
+.icon-cart {
+    width: 30px;
+    height: 30px;
+}
+.icon-heart {
+    width: 24px;
+    height: 24px;
+}
+/* Показываем иконки при наведении */
+.product-card:hover .product-icons {
+    opacity: 1;
+}
+
+/* Стили для скидки */
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #46A358;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Стили для старой цены */
+.old-price {
+    color: gray;
+    text-decoration: line-through;
+    font-size: 14px;
+    margin-left: 5px;
+}
+>>>>>>> Stashed changes
