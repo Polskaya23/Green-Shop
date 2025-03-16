@@ -7,61 +7,129 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<<<<<<< Updated upstream
-<section class="top-section">
-=======
-<div class="products-container">
-<nav class="filter-bar">
-    <ul>
-        <li><a href="#" class="active">All Plants</a></li>
-        <li><a href="#">New Arrivals</a></li>
-        <li><a href="#">Sale</a></li>
-    </ul>
-    <select>
-        <option>Sort by: Default sorting</option>
-        <option>Price: Low to High</option>
-        <option>Price: High to Low</option>
-    </select>
-</nav>
-    <div class="product-grid">
-        <!-- Первая карточка -->
-        <div class="product-card">
-            <img src="images/plant10.png" alt="Barberton Daisy">
-            <div class="product-icons">
-                <img src="images/cart.svg" alt="Cart">
-                <img src="images/heart.svg" alt="Like">
-                <img src="images/search.svg" alt="Search">
-            </div>
-            <p class="name">Barberton Daisy</p>
-            <p class="price">$119.00</p>
-        </div>
+<!-- Шапка сайту з логотипом -->
+<div class="container">
+<header class="header">
+    <div class="logo">
+        <img src="images/logo.png" alt="GreenShop">
+    </div>
 
-        <!-- Вторая карточка -->
-        <div class="product-card">
-            <img src="images/plant11.png" alt="Angel Wing Begonia">
-            <div class="product-icons">
-                <img src="images/cart.svg" alt="Cart">
-                <img src="images/heart.svg" alt="Like">
-                <img src="images/search.svg" alt="Search">
-            </div>
-            <p class="name">Angel Wing Begonia</p>
-            <p class="price">$169.00</p>
-        </div>
+    <!-- Навігація -->
+    <nav>
+        <ul class="list">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="shop.html">Shop</a>
+            </li>
+            <li>
+                <a href="plant_care.html">Plant Care</a>
+                <ul class="dropdown">
+                    <li><a href="#">Drainage</a></li>
+                    <li><a href="#">Fungicides</a></li>
+                    <li><a href="#">Fertilizer</a></li>
+                    <li class="has-submenu active">
+                        <a href="#">Priming<svg width="10" height="6" viewBox="0 0 7 10" fill="white" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.79141 9.05421C7.02467 9.26992 7.02548 9.6204 6.79322 9.83704C6.58208 10.034 6.251 10.0525 6.01729 9.89219L5.95032 9.83873L1.14237 5.39264C0.929677 5.19596 0.910329 4.88737 1.08433 4.67032L1.14233 4.60816L5.95028 0.161336C6.18353 -0.0543896 6.56091 -0.0536639 6.79319 0.162956C7.00435 0.359884 7.0229 0.667444 6.84929 0.883814L6.79144 0.945788L2.40784 5.00061L6.79141 9.05421Z" fill="white"/>
+                        </svg></a>
+                        <ul class="dropdown-level-2">
+                            <li><a href="#">Universal</a></li>
+                            <li><a href="#">For Ficus</a></li>
+                            <li><a href="#">For Cacti</a></li>
+                            <li><a href="#">For Citrus</a></li>
+                            <li><a href="#">For those in bloom</a></li>
+                            <li><a href="#">For Orchids</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="blogs.html">Blogs</a>
+            </li>
+        </ul>
+    </nav>
 
-        <!-- Третья карточка со скидкой -->
-        <div class="product-card">
-            <div class="discount-badge">13% OFF</div>  <!-- Бейдж скидки -->
-            <img src="images/plant12.png" alt="African Violet">
-            <div class="product-icons">
-                <img src="images/cart.svg" alt="Cart">
-                <img src="images/heart.svg" alt="Like">
-                <img src="images/search.svg" alt="Search">
-            </div>
-            <p class="name">African Violet</p>
-            <p class="price">$199.00 <span class="old-price">$229.00</span></p>
-        </div>
+    <!-- Кнопка Login (приклад) -->
+    <div class="login-btn">
+        <a href="registration.html">Login</a>
+    </div>
+</header>
+
+<!-- Основний контент сторінки -->
+<div class="container">
+<section class="main-container">
+     <div class="text-content">
+         <p class="welcome-text">WELCOME TO GREENSHOP</p>
+         <h1 class="main-heading">LET'S MAKE A <br> BETTER <span class="highlight">PLANET</span></h1>
+         <p class="description">Wу are online plant shop offering a wide range of cheap and trendy plants.
+         Use our plants to create a unique Urban Jungle. Order your favorite plants!</p>
+         <button class="shop-button">SHOP NOW</button>
+     </div>
+    <div class="image-container">
+        <img src="images/01 2.png" alt="Small image" class="small-image">
+        <img src="images/01 1.png" alt="Big image" class="big-image">
     </div>
     </div>
+    </section>
+
+<!-- Підвал сайту -->
+<footer>
+    <p>&copy; 2025 GREENSHOP – усі права захищені</p>
+</footer>
+<!--<section class="top-section">-->
+<!--<div class="products-container">-->
+<!--<nav class="filter-bar">-->
+<!--    <ul>-->
+<!--        <li><a href="#" class="active">All Plants</a></li>-->
+<!--        <li><a href="#">New Arrivals</a></li>-->
+<!--        <li><a href="#">Sale</a></li>-->
+<!--    </ul>-->
+<!--    <select>-->
+<!--        <option>Sort by: Default sorting</option>-->
+<!--        <option>Price: Low to High</option>-->
+<!--        <option>Price: High to Low</option>-->
+<!--    </select>-->
+<!--</nav>-->
+<!--    <div class="product-grid">-->
+<!--        &lt;!&ndash; Первая карточка &ndash;&gt;-->
+<!--        <div class="product-card">-->
+<!--            <img src="images/plant10.png" alt="Barberton Daisy">-->
+<!--            <div class="product-icons">-->
+<!--                <img src="images/cart.svg" alt="Cart">-->
+<!--                <img src="images/heart.svg" alt="Like">-->
+<!--                <img src="images/search.svg" alt="Search">-->
+<!--            </div>-->
+<!--            <p class="name">Barberton Daisy</p>-->
+<!--            <p class="price">$119.00</p>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Вторая карточка &ndash;&gt;-->
+<!--        <div class="product-card">-->
+<!--            <img src="images/plant11.png" alt="Angel Wing Begonia">-->
+<!--            <div class="product-icons">-->
+<!--                <img src="images/cart.svg" alt="Cart">-->
+<!--                <img src="images/heart.svg" alt="Like">-->
+<!--                <img src="images/search.svg" alt="Search">-->
+<!--            </div>-->
+<!--            <p class="name">Angel Wing Begonia</p>-->
+<!--            <p class="price">$169.00</p>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Третья карточка со скидкой &ndash;&gt;-->
+<!--        <div class="product-card">-->
+<!--            <div class="discount-badge">13% OFF</div>  &lt;!&ndash; Бейдж скидки &ndash;&gt;-->
+<!--            <img src="images/plant12.png" alt="African Violet">-->
+<!--            <div class="product-icons">-->
+<!--                <img src="images/cart.svg" alt="Cart">-->
+<!--                <img src="images/heart.svg" alt="Like">-->
+<!--                <img src="images/search.svg" alt="Search">-->
+<!--            </div>-->
+<!--            <p class="name">African Violet</p>-->
+<!--            <p class="price">$199.00 <span class="old-price">$229.00</span></p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    </div>-->
 </body>
 </html>
 <!--<section class="top-section">
