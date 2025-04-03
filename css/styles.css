@@ -1,4 +1,658 @@
 /* Згадка про скидання відступів та шрифтів (опційно) */
+/*!** {*!*/
+/*!*    margin: 0;*!*/
+/*!*    padding: 0;*!*/
+/*!*    box-sizing: border-box;*!*/
+/*!*}*!*/
+
+/*body {*/
+/*    font-family: Arial, sans-serif;*/
+/*}*/
+/*.container {*/
+/*    max-width: 1200px;*/
+/*    margin: 0 auto;*/
+/*    padding: 0 20px; !* Отступы по бокам *!*/
+/*}*/
+/*!* Шапка сайту *!*/
+/*.header {*/
+/*    width: 100%;*/
+/*    max-width: 1200px;*/
+/*    height: 53px;*/
+/*    position: fixed;*/
+/*    top: 30px;*/
+/*    left: 50%;*/
+/*    transform: translateX(-50%);*/
+/*    background-color: transparent !important; !* Принудительная прозрачность *!*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: space-between;*/
+/*    padding: 0 20px;*/
+/*    box-shadow: none !important; !* Убираем возможные тени *!*/
+/*    border: none; !* Если есть рамка *!*/
+/*    z-index: 1000;*/
+/*}*/
+/*!* Общий контейнер *!*/
+/*.main-container {*/
+/*    width: 1200px;*/
+/*    height: 450px;*/
+/*    margin: 95px auto 40px auto; !* Добавляем отступ снизу *!*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    background-color: lightgrey;*/
+/*    justify-content: space-between;*/
+/*}*/
+
+/*!* Текстовый блок *!*/
+/*.welcome-text {*/
+/*    font-size: 16px;*/
+/*    text-transform: uppercase;*/
+/*    color: gray;*/
+/*    margin-bottom: 10px;*/
+/*    margin-left: 0; !* Убираем лишний отступ *!*/
+/*}*/
+
+/*.text-content {*/
+/*    width: 50%;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: flex-start; !* Выровнять весь текст влево *!*/
+/*    text-align: left;*/
+/*    margin-left: 0; !* Убираем отступ *!*/
+/*    padding-left: 0; !* Убираем возможный внутренний отступ *!*/
+/*}*/
+
+/*.main-heading {*/
+/*    font-size: 48px;*/
+/*    font-weight: bold;*/
+/*    margin-bottom: 20px;*/
+/*    margin-left: 0; !* Убираем отступ *!*/
+/*    text-align: left; !* Выравниваем *!*/
+/*}*/
+
+/*.highlight {*/
+/*    color: green; !* Цвет слова PLANET *!*/
+/*}*/
+
+/*.description {*/
+/*    font-size: 18px;*/
+/*    line-height: 1.5;*/
+/*    color: #555;*/
+/*    margin-bottom: 30px; !* Увеличиваем отступ *!*/
+/*}*/
+
+/*.shop-button {*/
+/*    background-color: green;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    padding: 12px 24px;*/
+/*    font-size: 18px;*/
+/*    cursor: pointer;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+/*!* Контейнер изображений *!*/
+
+/*.image-container {*/
+/*    display: flex;*/
+/*    align-items: flex-end; !* Выравниваем изображения по нижнему краю *!*/
+/*    position: relative;*/
+/*}*/
+/*!* Большая картинка *!*/
+/*.big-image {*/
+/*    max-width: 507px;*/
+/*    height: auto;*/
+/*}*/
+
+/*!* Маленькая картинка *!*/
+/*.small-image {*/
+/*    position: absolute;*/
+/*    width: 135px;*/
+/*    height: 135px;*/
+/*    bottom: 15px; !* Выравниваем по нижнему краю *!*/
+/*    right: 300px; !* Двигаем влево, если нужно *!*/
+/*}*/
+/*.logo a {*/
+/*    text-decoration: none;*/
+/*    font-size: 1.5rem;*/
+/*    font-weight: bold;*/
+/*    color: #39A66D; !* Наприклад, зелений відтінок *!*/
+/*}*/
+
+/*!* Стили для списка *!*/
+/*.list {*/
+/*    list-style: none;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    gap: 40px;*/
+/*    padding: 0;*/
+/*}*/
+/*.list > li {*/
+/*    position: relative;*/
+/*    padding-bottom: 10px;*/
+/*}*/
+/*.list > li:hover {*/
+/*    border-bottom: 3px solid green;*/
+/*}*/
+/*.list li a:hover {*/
+/*    font-weight: 700; !* шрифт становится жирным *!*/
+/*}*/
+/*!* Стили для первог уровня выпадающего меню *!*/
+/*.dropdown {*/
+/*    position: absolute;*/
+/*    top: calc(100% + 5px);   !* Отступ 5px вниз от основного пункта *!*/
+/*    left: 0;                 !* Начинаем позиционировать от левого края родителя *!*/
+/*    !* Вместо фиксированного width/height задаём min-width и auto-height *!*/
+/*    min-width: 188px;        !* Меню не будет уже 188px, но может расти выше *!*/
+/*    !* Убираем жёсткую height: 143px; чтобы меню подстраивалось под контент *!*/
+
+/*    background-color: #EDF6EE;*/
+/*    !* Можно добавить лёгкую обводку или закругление углов *!*/
+/*    box-shadow: 0 4px 6px rgba(0,0,0,0.1);*/
+
+/*    display: none;           !* Скрыто по умолчанию *!*/
+/*    list-style: none;*/
+/*    margin: 0;               !* Убираем внешние отступы *!*/
+/*    padding: 10px 0;         !* Вертикальные отступы (верх/низ) *!*/
+/*    text-align: left;        !* Текст прижат влево *!*/
+/*}*/
+
+/*!* Стили пунктов в меню, чтобы текст смотрелся аккуратнее *!*/
+/*.dropdown li {*/
+/*    padding: 8px 16px;       !* Внутренние отступы у каждого li *!*/
+/*    color: #333;             !* Тёмный текст на светлом фоне *!*/
+/*    font-size: 16px;         !* Размер шрифта, примерно как на скриншоте *!*/
+/*}*/
+
+/*.dropdown li:hover {*/
+/*    color: black;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.dropdown li.has-submenu a {*/
+/*    display: flex;*/
+/*    position: relative;*/
+/*    padding-right: 30px;*/
+/*    color: #333;*/
+/*    text-decoration: none;*/
+/*    white-space: nowrap;*/
+/*}*/
+/*.dropdown li.has-submenu a:hover {*/
+/*    background-color: #39A66D;*/
+/*    color: #fff;*/
+/*    font-weight: bold;*/
+/*}*/
+/*.dropdown li.has-submenu a svg{*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    right: 6px;*/
+/*    transform: translateY(-50%);*/
+/*    width: 10px;*/
+/*    height: 6px;*/
+/*    fill: #333;*/
+/*}*/
+/*!* Стили для второго уровня подменю *!*/
+/*.dropdown-level-2 {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 100%;*/
+/*    list-style-type: none;*/
+/*    margin: 0;*/
+/*    padding: 10px 0;*/
+/*    min-width: 200px;*/
+/*    background-color: #EDF6EE;*/
+/*    color: #333;*/
+/*    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+/*    display: none;*/
+/*    text-align: left;*/
+/*}*/
+/*.dropdown-level-2 li {*/
+/*    padding: 8px 16px;*/
+/*    font-size: 16px;*/
+/*}*/
+/*.dropdown-level-2 li a{*/
+/*    background-color: #EDF6EE !important;*/
+/*    color: #333 !important;*/
+/*}*/
+/*.dropdown-level-2 li:hover {*/
+/*    background-color: #dce7db;*/
+/*}*/
+/*.dropdown li:hover > .dropdown-level-2 {*/
+/*    display: block;*/
+/*}*/
+/*!* Показываем первый уровень меню при наведении *!*/
+/*.list li:hover > .dropdown {*/
+/*    display: block;*/
+/*}*/
+
+/*!* Показываем второй уровень подменю при наведении *!*/
+/*.dropdown li:hover > .dropdown-level-2 {*/
+/*    display: block;*/
+/*}*/
+
+/*!* Убираем стандартное подчеркивание ссылок *!*/
+/*.list a {*/
+/*    text-decoration: none;*/
+/*    color: black;*/
+/*}*/
+/*!* Стили при наведении *!*/
+/*.list li a:hover {*/
+/*    font-weight: bold;*/
+/*    color: black;*/
+/*}*/
+
+/*.login-btn {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+/*.login-btn a {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    gap: 8px; !* Расстояние между иконкой и текстом *!*/
+/*    padding: 8px 16px;*/
+/*    background-color: #4C8C57; !* Зеленый фон *!*/
+/*    color: #fff;*/
+/*    font-size: 16px;*/
+/*    font-weight: bold;*/
+/*    text-decoration: none;*/
+/*    border-radius: 8px; !* Закругленные углы *!*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*    transition: background-color 0.3s ease;*/
+/*}*/
+
+/*!* Добавляем hover-эффект *!*/
+/*.login-btn a:hover {*/
+/*    background-color: #3A6E44; !* Темно-зеленый при наведении *!*/
+/*}*/
+
+/*!* Стиль для иконки *!*/
+/*.login-btn a i {*/
+/*    font-size: 18px;*/
+/*    color: white;!* Размер иконки *!*/
+/*}*/
+
+/*!* Стилі "героя" сторінки (головний банер) *!*/
+/*.hero {*/
+/*    text-align: center;*/
+/*    padding: 60px 20px;*/
+/*}*/
+
+/*.hero h1 {*/
+/*    font-size: 2.5rem;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*.hero p {*/
+/*    font-size: 1.2rem;*/
+/*    max-width: 600px;*/
+/*    margin: 0 auto 20px auto;*/
+/*}*/
+
+/*.hero .btn {*/
+/*    display: inline-block;*/
+/*    background-color: #39A66D;*/
+/*    color: #fff;*/
+/*    text-decoration: none;*/
+/*    padding: 12px 24px;*/
+/*    border-radius: 4px;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*!* Приклад для footer *!*/
+/*footer {*/
+/*    text-align: center;*/
+/*    padding: 20px;*/
+/*    background-color: #f2f2f2;*/
+/*    margin-top: 40px;*/
+/*}*/
+/*    @media (max-width: 768px) {*/
+/*        .main-container {*/
+/*            flex-direction: column; !* Перестроить макет в колонку *!*/
+/*            align-items: center;*/
+/*            text-align: center;*/
+/*        }*/
+
+/*        .text-content {*/
+/*            max-width: 100%;*/
+/*            text-align: center; !* Центрируем текст *!*/
+/*        }*/
+
+/*        .image-container {*/
+/*            flex-direction: column;*/
+/*            align-items: center;*/
+/*            max-width: 100%;*/
+/*        }*/
+
+/*        .big-image {*/
+/*            width: 80%; !* Уменьшаем картинку *!*/
+/*        }*/
+
+/*        .small-image {*/
+/*            width: 90px; !* Делаем меньше *!*/
+/*            margin-bottom: 10px;*/
+/*        }*/
+/*    }*/
+/*@font-face {*/
+/*    font-family: 'CeraPro';*/
+/*    src: url('../fonts/CeraPro-Regular.woff2') format('woff2'),*/
+/*    url('../fonts/CeraPro-Regular.woff') format('woff');*/
+/*    font-weight: 400;*/
+/*    font-style: normal;*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: 'CeraPro';*/
+/*    src: url('../fonts/CeraPro-Bold.woff2') format('woff2'),*/
+/*    url('../fonts/CeraPro-Bold.woff') format('woff');*/
+/*    font-weight: 700;*/
+/*    font-style: normal;*/
+/*}*/
+/*body {*/
+/*font-family: CeraPro, sans-serif;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    background-color: #f5f5f5;*/
+/*    text-align: center;*/
+/*}*/
+/*    .top-section {*/
+/*    display: flex;*/
+/*        justify-content: center;*/
+/*        gap: 20px;*/
+/*        padding: 40px;*/
+/*        background-color:white;*/
+/*}*/
+/*    .card{*/
+/*    display:flex;*/
+/*    align-items:center;*/
+/*    background:#fff;*/
+/*    padding:20px;*/
+/*    width:580px;*/
+/*    height:300px;*/
+/*    text-align:left;*/
+/*    border-radius:10px;*/
+/*    box-shadow:0 4px 8px rgba(0,0,0,.1);*/
+/*    }*/
+/*    .card img{*/
+/*        width:250px;*/
+/*        height:285px;*/
+/*        border-radius:10px;*/
+/*    }*/
+/*    .card-content{*/
+/*        text-align: right;*/
+/*    }*/
+/*    .card h3{*/
+/*        font-size:18px;*/
+/*        margin:15px 0;*/
+/*    }*/
+/*    .card p{*/
+/*        font-size:14px;*/
+/*        color:#666;*/
+/*    }*/
+/*.btn::after {*/
+/*    content: " →";  !* Добавляет стрелку *!*/
+/*    font-size: 16px;*/
+/*    margin-left: 5px;*/
+/*}*/
+/*    .btn {*/
+/*        display:inline-block;*/
+/*        padding:10px 15px;*/
+/*        margin-top:10px;*/
+/*        background-color:#4caf50;*/
+/*        color:white;*/
+/*        text-decoration:none;*/
+/*        border-radius:5px;*/
+/*    }*/
+/*    .blog-section{*/
+/*        padding:40px;*/
+/*        background-color: #fff;*/
+/*    }*/
+/*    .blog-section h2 {*/
+/*        font-size:24px;*/
+/*        margin-bottom: 10px;*/
+/*    }*/
+/*    .blog-container {*/
+/*        display: flex;*/
+/*        justify-content: center;*/
+/*        gap: 20px;*/
+/*        flex-wrap: wrap;*/
+/*    }*/
+/*    .blog-card {*/
+/*        background:#fff;*/
+/*        width:300px;*/
+/*        text-align: left;*/
+/*        border-radius:10px;*/
+/*        overflow:hidden;*/
+/*        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+/*    }*/
+/*    .blog-card img {*/
+/*        width:100%;*/
+/*        height:200px;*/
+/*        object-fit: cover;*/
+/*    }*/
+/*    .blog-info{*/
+/*        flex-grow: 1;*/
+/*    }*/
+/*    .blog-info span{*/
+/*        font-size: 12px;*/
+/*        color:#888;*/
+/*    }*/
+/*.blog-info h4{*/
+/*    font-size:18px;*/
+/*    margin: 10px 0;*/
+/*}*/
+/*.blog-info p{*/
+/*    font-size:14px;*/
+/*    color:#666;*/
+/*}*/
+/*.read-more{*/
+/*    display:inline-block;*/
+/*    margin-top:10px;*/
+/*    color:#4caf50;*/
+/*    text-decoration:none;*/
+/*    font-weight: bold;*/
+/*}*/
+/*@media screen and (max-width: 1024px) {*/
+/*    .blog-card {*/
+/*        width: calc(50% - 20px); !* 2 колонки на планшетах *!*/
+/*    }*/
+/*}*/
+
+/*@media screen and (max-width: 768px) {*/
+/*    .blog-card {*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/
+/*    .top-section {*/
+/*        flex-direction: column;*/
+/*        align-items: center;*/
+/*    }*/
+/*    .card {*/
+/*        width: 90%;*/
+/*    }*/
+/*    .btn {*/
+/*        width: auto;*/
+/*    }*/
+/*<<<<<<< Updated upstream*/
+/*}*/
+/*=======*/
+/*body {*/
+/*    font-family: 'CeraPro', sans-serif;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    background-color: transparent;*/
+/*}*/
+/**,*/
+/**::before,*/
+/**::after {*/
+/*    box-sizing: border-box;*/
+/*}*/
+/*!* Главный контейнер *!*/
+/*.products-container {*/
+/*    width: 838px;*/
+/*    position: relative; !* Чтобы `filter-bar` был относительно него *!*/
+/*    padding-top: 225px; !* Оставляем место для `filter-bar` и `product-grid` *!*/
+/*    margin-left: 105px; !* Делаем отступ слева 105px *!*/
+/*}*/
+
+/*!* Фильтр (меню) *!*/
+/*.filter-bar {*/
+/*    position: absolute;*/
+/*    top: 171px; !* Меню фиксируется на 171px *!*/
+/*    width: 838px;*/
+/*    height: 23px;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    background-color: transparent;*/
+/*    z-index: 10;*/
+/*    padding: 5px 10px;*/
+/*}*/
+
+/*!* Меню фильтра *!*/
+/*.filter-bar ul {*/
+/*    list-style: none;*/
+/*    display: flex;*/
+/*    gap: 20px;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*}*/
+
+/*.filter-bar a {*/
+/*    text-decoration: none;*/
+/*    color: black;*/
+/*    padding: 3px 0; !* Немного отступа, чтобы линия не прилегала к тексту *!*/
+/*    transition: color 0.3s; !* Плавный переход цвета *!*/
+/*}*/
+
+/*.filter-bar a:hover {*/
+/*    color: #46A358;*/
+/*    border-bottom: 2px solid #46A358; !* Зеленая линия снизу при наведении *!*/
+/*}*/
+/*.filter-bar select {*/
+/*    border: none;*/
+/*    outline: none;*/
+/*    background: transparent;*/
+/*    font-family: inherit;*/
+/*    font-size: inherit;*/
+/*    cursor: pointer;*/
+/*}*/
+/*!* Контейнер товаров *!*/
+/*.product-grid {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(3, 258px);*/
+/*    grid-template-rows: 350px;*/
+/*    gap: 20px;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    width: 838px;*/
+/*}*/
+
+/*!* Карточка товара *!*/
+/*.product-card {*/
+/*    width: 258px;          !* Размер карточки (пример) *!*/
+/*    !* Высоту можешь задать или оставить auto *!*/
+/*    background-color: transparent;*/
+/*    text-align: center;    !* По умолчанию содержимое будет по центру *!*/
+/*    padding: 10px;         !* Внутренний отступ, если нужно *!*/
+/*    margin: 0 20px;        !* Отступ между карточками *!*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*!* Изображение *!*/
+/*.product-card img {*/
+/*    display: block;*/
+/*    margin: 0 auto;        !* Горизонтальное выравнивание по центру *!*/
+/*    width: 250px;*/
+/*    height: 250px;*/
+/*    background-color: transparent;*/
+/*}*/
+
+/*.name, .price {*/
+/*    text-align: left;      !* Выровнять текст по левому краю *!*/
+/*    margin-left: 10px;     !* Небольшой отступ слева *!*/
+/*    margin-right: 10px;    !* Чтобы текст не прилипал справа *!*/
+/*    box-sizing: border-box;*/
+/*}*/
+/*.name {*/
+/*    font-weight: normal;*/
+/*    margin-top: 5px;*/
+/*}*/
+
+/*.price {*/
+/*    font-size: 14px;*/
+/*    color: #46A358;        !* Зеленый цвет для цены *!*/
+/*    margin-top: 3px;*/
+/*}*/
+/*.product-card {*/
+/*    position: relative;*/
+/*    width: 258px;*/
+/*    height: 350px;*/
+/*    background: transparent;*/
+/*    text-align: center;*/
+/*    overflow: hidden;*/
+/*    transition: transform 0.3s ease-in-out;*/
+/*}*/
+
+/*!* Эффект увеличения карточки при наведении *!*/
+/*.product-card:hover {*/
+/*    transform: scale(1.05);*/
+/*}*/
+
+/*!* Стили для блока с иконками *!*/
+/*.product-icons {*/
+/*    display: flex;*/
+/*    justify-content: center;  !* Центрируем иконки *!*/
+/*    gap: 10px;  !* Расстояние между иконками *!*/
+/*    margin-top: 10px; !* Отступ сверху *!*/
+/*}*/
+
+/*.product-icons img {*/
+/*    width: 24px; !* Размер иконок *!*/
+/*    height: 24px;*/
+/*    cursor: pointer; !* Добавляем курсор *!*/
+/*    transition: transform 0.3s ease; !* Анимация *!*/
+/*}*/
+
+/*.product-icons img:hover {*/
+/*    transform: scale(1.2); !* Увеличение при наведении *!*/
+/*}*/
+/*}*/
+/*.icon-cart {*/
+/*    width: 30px;*/
+/*    height: 30px;*/
+/*}*/
+/*.icon-heart {*/
+/*    width: 24px;*/
+/*    height: 24px;*/
+/*}*/
+/*!* Показываем иконки при наведении *!*/
+/*.product-card:hover .product-icons {*/
+/*    opacity: 1;*/
+/*}*/
+
+/*!* Стили для скидки *!*/
+/*.discount-badge {*/
+/*    position: absolute;*/
+/*    top: 10px;*/
+/*    left: 10px;*/
+/*    background: #46A358;*/
+/*    color: white;*/
+/*    padding: 5px 10px;*/
+/*    font-size: 14px;*/
+/*    font-weight: bold;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+/*!* Стили для старой цены *!*/
+/*.old-price {*/
+/*    color: gray;*/
+/*    text-decoration: line-through;*/
+/*    font-size: 14px;*/
+/*    margin-left: 5px;*/
+/*}*/
 /** {*/
 /*    margin: 0;*/
 /*    padding: 0;*/
@@ -6,651 +660,229 @@
 /*}*/
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Cera Pro', Arial, sans-serif;
+    color: #333;
+}
+.services-newsletter {
+    background-color: #fff;
+    padding: 30px 0 0 0;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FBFBFB;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: nowrap;
+}
+.services {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+.service-card {
+    width: 204px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 202px;
+}
+.service-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.service-icon--garden {
+    background-image: url('../images/Garden Care.svg');
+}
+.service-icon--renovation {
+    background-image: url('../images/Plant Renovation.svg');
+}
+.service-icon--watering {
+    background-image: url('../images/Watering Garden.svg');
+}
+.service-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.service-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+.newsletter {
+    width: 350px;
+    padding: 20px;
+    background-color:  #FBFBFB;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    height: 100%;
+}
+.newsletter-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+    width: 100%;
+}
+.newsletter-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+}
+.newsletter-btn {
+    padding: 10px 20px;
+    background-color: #46A358;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.newsletter-desc {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #555;
 }
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* Отступы по бокам */
-}
-/* Шапка сайту */
-.header {
+    padding: 0 15px;
     width: 100%;
-    max-width: 1200px;
-    height: 53px;
-    position: fixed;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: transparent !important; /* Принудительная прозрачность */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    box-shadow: none !important; /* Убираем возможные тени */
-    border: none; /* Если есть рамка */
-    z-index: 1000;
-}
-/* Общий контейнер */
-.main-container {
-    width: 1200px;
-    height: 450px;
-    margin: 95px auto 40px auto; /* Добавляем отступ снизу */
-    display: flex;
-    align-items: center;
-    background-color: lightgrey;
-    justify-content: space-between;
-}
-
-/* Текстовый блок */
-.welcome-text {
-    font-size: 16px;
-    text-transform: uppercase;
-    color: gray;
-    margin-bottom: 10px;
-    margin-left: 0; /* Убираем лишний отступ */
-}
-
-.text-content {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Выровнять весь текст влево */
-    text-align: left;
-    margin-left: 0; /* Убираем отступ */
-    padding-left: 0; /* Убираем возможный внутренний отступ */
-}
-
-.main-heading {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    margin-left: 0; /* Убираем отступ */
-    text-align: left; /* Выравниваем */
-}
-
-.highlight {
-    color: green; /* Цвет слова PLANET */
-}
-
-.description {
-    font-size: 18px;
-    line-height: 1.5;
-    color: #555;
-    margin-bottom: 30px; /* Увеличиваем отступ */
-}
-
-.shop-button {
-    background-color: green;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* Контейнер изображений */
-
-.image-container {
-    display: flex;
-    align-items: flex-end; /* Выравниваем изображения по нижнему краю */
-    position: relative;
-}
-/* Большая картинка */
-.big-image {
-    max-width: 507px;
-    height: auto;
-}
-
-/* Маленькая картинка */
-.small-image {
-    position: absolute;
-    width: 135px;
-    height: 135px;
-    bottom: 15px; /* Выравниваем по нижнему краю */
-    right: 300px; /* Двигаем влево, если нужно */
-}
-.logo a {
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #39A66D; /* Наприклад, зелений відтінок */
-}
-
-/* Стили для списка */
-.list {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    padding: 0;
-}
-.list > li {
-    position: relative;
-    padding-bottom: 10px;
-}
-.list > li:hover {
-    border-bottom: 3px solid green;
-}
-.list li a:hover {
-    font-weight: 700; /* шрифт становится жирным */
-}
-/* Стили для первог уровня выпадающего меню */
-.dropdown {
-    position: absolute;
-    top: calc(100% + 5px);   /* Отступ 5px вниз от основного пункта */
-    left: 0;                 /* Начинаем позиционировать от левого края родителя */
-    /* Вместо фиксированного width/height задаём min-width и auto-height */
-    min-width: 188px;        /* Меню не будет уже 188px, но может расти выше */
-    /* Убираем жёсткую height: 143px; чтобы меню подстраивалось под контент */
-
-    background-color: #EDF6EE;
-    /* Можно добавить лёгкую обводку или закругление углов */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-
-    display: none;           /* Скрыто по умолчанию */
-    list-style: none;
-    margin: 0;               /* Убираем внешние отступы */
-    padding: 10px 0;         /* Вертикальные отступы (верх/низ) */
-    text-align: left;        /* Текст прижат влево */
-}
-
-/* Стили пунктов в меню, чтобы текст смотрелся аккуратнее */
-.dropdown li {
-    padding: 8px 16px;       /* Внутренние отступы у каждого li */
-    color: #333;             /* Тёмный текст на светлом фоне */
-    font-size: 16px;         /* Размер шрифта, примерно как на скриншоте */
-}
-
-.dropdown li:hover {
-    color: black;
-    font-weight: bold;
-}
-
-.dropdown li.has-submenu a {
-    display: flex;
-    position: relative;
-    padding-right: 30px;
-    color: #333;
-    text-decoration: none;
-    white-space: nowrap;
-}
-.dropdown li.has-submenu a:hover {
-    background-color: #39A66D;
-    color: #fff;
-    font-weight: bold;
-}
-.dropdown li.has-submenu a svg{
-    position: absolute;
-    top: 50%;
-    right: 6px;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 6px;
-    fill: #333;
-}
-/* Стили для второго уровня подменю */
-.dropdown-level-2 {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    list-style-type: none;
-    margin: 0;
-    padding: 10px 0;
-    min-width: 200px;
-    background-color: #EDF6EE;
-    color: #333;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: none;
-    text-align: left;
-}
-.dropdown-level-2 li {
-    padding: 8px 16px;
-    font-size: 16px;
-}
-.dropdown-level-2 li a{
-    background-color: #EDF6EE !important;
-    color: #333 !important;
-}
-.dropdown-level-2 li:hover {
-    background-color: #dce7db;
-}
-.dropdown li:hover > .dropdown-level-2 {
-    display: block;
-}
-/* Показываем первый уровень меню при наведении */
-.list li:hover > .dropdown {
-    display: block;
-}
-
-/* Показываем второй уровень подменю при наведении */
-.dropdown li:hover > .dropdown-level-2 {
-    display: block;
-}
-
-/* Убираем стандартное подчеркивание ссылок */
-.list a {
-    text-decoration: none;
-    color: black;
-}
-/* Стили при наведении */
-.list li a:hover {
-    font-weight: bold;
-    color: black;
-}
-
-.login-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.login-btn a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px; /* Расстояние между иконкой и текстом */
-    padding: 8px 16px;
-    background-color: #4C8C57; /* Зеленый фон */
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px; /* Закругленные углы */
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/* Добавляем hover-эффект */
-.login-btn a:hover {
-    background-color: #3A6E44; /* Темно-зеленый при наведении */
-}
-
-/* Стиль для иконки */
-.login-btn a i {
-    font-size: 18px;
-    color: white;/* Размер иконки */
-}
-
-/* Стилі "героя" сторінки (головний банер) */
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto 20px auto;
-}
-
-.hero .btn {
-    display: inline-block;
-    background-color: #39A66D;
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 4px;
-    font-weight: bold;
-}
-
-/* Приклад для footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f2f2f2;
-    margin-top: 40px;
-}
-    @media (max-width: 768px) {
-        .main-container {
-            flex-direction: column; /* Перестроить макет в колонку */
-            align-items: center;
-            text-align: center;
-        }
-
-        .text-content {
-            max-width: 100%;
-            text-align: center; /* Центрируем текст */
-        }
-
-        .image-container {
-            flex-direction: column;
-            align-items: center;
-            max-width: 100%;
-        }
-
-        .big-image {
-            width: 80%; /* Уменьшаем картинку */
-        }
-
-        .small-image {
-            width: 90px; /* Делаем меньше */
-            margin-bottom: 10px;
-        }
-    }
-@font-face {
-    font-family: 'CeraPro';
-    src: url('../fonts/CeraPro-Regular.woff2') format('woff2'),
-    url('../fonts/CeraPro-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'CeraPro';
-    src: url('../fonts/CeraPro-Bold.woff2') format('woff2'),
-    url('../fonts/CeraPro-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-}
-body {
-font-family: CeraPro, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    text-align: center;
-}
-    .top-section {
-    display: flex;
-        justify-content: center;
-        gap: 20px;
-        padding: 40px;
-        background-color:white;
-}
-    .card{
-    display:flex;
-    align-items:center;
-    background:#fff;
-    padding:20px;
-    width:580px;
-    height:300px;
-    text-align:left;
-    border-radius:10px;
-    box-shadow:0 4px 8px rgba(0,0,0,.1);
-    }
-    .card img{
-        width:250px;
-        height:285px;
-        border-radius:10px;
-    }
-    .card-content{
-        text-align: right;
-    }
-    .card h3{
-        font-size:18px;
-        margin:15px 0;
-    }
-    .card p{
-        font-size:14px;
-        color:#666;
-    }
-.btn::after {
-    content: " →";  /* Добавляет стрелку */
-    font-size: 16px;
-    margin-left: 5px;
-}
-    .btn {
-        display:inline-block;
-        padding:10px 15px;
-        margin-top:10px;
-        background-color:#4caf50;
-        color:white;
-        text-decoration:none;
-        border-radius:5px;
-    }
-    .blog-section{
-        padding:40px;
-        background-color: #fff;
-    }
-    .blog-section h2 {
-        font-size:24px;
-        margin-bottom: 10px;
-    }
-    .blog-container {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-    }
-    .blog-card {
-        background:#fff;
-        width:300px;
-        text-align: left;
-        border-radius:10px;
-        overflow:hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .blog-card img {
-        width:100%;
-        height:200px;
-        object-fit: cover;
-    }
-    .blog-info{
-        flex-grow: 1;
-    }
-    .blog-info span{
-        font-size: 12px;
-        color:#888;
-    }
-.blog-info h4{
-    font-size:18px;
-    margin: 10px 0;
-}
-.blog-info p{
-    font-size:14px;
-    color:#666;
-}
-.read-more{
-    display:inline-block;
-    margin-top:10px;
-    color:#4caf50;
-    text-decoration:none;
-    font-weight: bold;
-}
-@media screen and (max-width: 1024px) {
-    .blog-card {
-        width: calc(50% - 20px); /* 2 колонки на планшетах */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .blog-card {
-        width: 100%;
-    }
-}
-    .top-section {
-        flex-direction: column;
-        align-items: center;
-    }
-    .card {
-        width: 90%;
-    }
-    .btn {
-        width: auto;
-    }
-<<<<<<< Updated upstream
-}
-=======
-body {
-    font-family: 'CeraPro', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-}
-*,
-*::before,
-*::after {
     box-sizing: border-box;
 }
-/* Главный контейнер */
-.products-container {
-    width: 838px;
-    position: relative; /* Чтобы `filter-bar` был относительно него */
-    padding-top: 225px; /* Оставляем место для `filter-bar` и `product-grid` */
-    margin-left: 105px; /* Делаем отступ слева 105px */
+.contact-banner-wrapper {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
-
-/* Фильтр (меню) */
-.filter-bar {
-    position: absolute;
-    top: 171px; /* Меню фиксируется на 171px */
-    width: 838px;
-    height: 23px;
+.contact-banner {
+    height: 88px;
+    background: linear-gradient(to right, #EDF6EF 0%, #52C368 100%);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: transparent;
-    z-index: 10;
-    padding: 5px 10px;
+    padding: 0 30px;
+    box-sizing: border-box;
 }
-
-/* Меню фильтра */
-.filter-bar ul {
-    list-style: none;
+.contact-logo img {
+    max-height: 40px;
+}
+.contact-item {
     display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-}
-
-.filter-bar a {
-    text-decoration: none;
-    color: black;
-    padding: 3px 0; /* Немного отступа, чтобы линия не прилегала к тексту */
-    transition: color 0.3s; /* Плавный переход цвета */
-}
-
-.filter-bar a:hover {
-    color: #46A358;
-    border-bottom: 2px solid #46A358; /* Зеленая линия снизу при наведении */
-}
-.filter-bar select {
-    border: none;
-    outline: none;
-    background: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    cursor: pointer;
-}
-/* Контейнер товаров */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 258px);
-    grid-template-rows: 350px;
-    gap: 20px;
-    justify-content: center;
     align-items: center;
-    width: 838px;
-}
-
-/* Карточка товара */
-.product-card {
-    width: 258px;          /* Размер карточки (пример) */
-    /* Высоту можешь задать или оставить auto */
-    background-color: transparent;
-    text-align: center;    /* По умолчанию содержимое будет по центру */
-    padding: 10px;         /* Внутренний отступ, если нужно */
-    margin: 0 20px;        /* Отступ между карточками */
-    box-sizing: border-box;
-}
-
-/* Изображение */
-.product-card img {
-    display: block;
-    margin: 0 auto;        /* Горизонтальное выравнивание по центру */
-    width: 250px;
-    height: 250px;
-    background-color: transparent;
-}
-
-.name, .price {
-    text-align: left;      /* Выровнять текст по левому краю */
-    margin-left: 10px;     /* Небольшой отступ слева */
-    margin-right: 10px;    /* Чтобы текст не прилипал справа */
-    box-sizing: border-box;
-}
-.name {
-    font-weight: normal;
-    margin-top: 5px;
-}
-
-.price {
+    gap: 10px;
     font-size: 14px;
-    color: #46A358;        /* Зеленый цвет для цены */
-    margin-top: 3px;
+    color: #333;
 }
-.product-card {
-    position: relative;
-    width: 258px;
-    height: 350px;
-    background: transparent;
-    text-align: center;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
+.footer-middle-wrapper {
+    background-color: transparent;
+    padding: 40px 0;
+    margin-top: 0;
+    padding-top: 0;
 }
-
-/* Эффект увеличения карточки при наведении */
-.product-card:hover {
-    transform: scale(1.05);
-}
-
-/* Стили для блока с иконками */
-.product-icons {
+.footer-content {
+    background-color:  #FBFBFB;
+    padding: 40px 30px;
     display: flex;
-    justify-content: center;  /* Центрируем иконки */
-    gap: 10px;  /* Расстояние между иконками */
-    margin-top: 10px; /* Отступ сверху */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+.footer-col {
+    width: 23%;
+    min-width: 200px;
+}
+.footer-col h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+.footer-col a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
 }
 
-.product-icons img {
-    width: 24px; /* Размер иконок */
-    height: 24px;
-    cursor: pointer; /* Добавляем курсор */
-    transition: transform 0.3s ease; /* Анимация */
+.footer-bottom {
+    background-color: #e8f5e9;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
 }
-
-.product-icons img:hover {
-    transform: scale(1.2); /* Увеличение при наведении */
+.footer-col ul li {
+    margin-bottom: 8px;
 }
+.footer-col a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
 }
-.icon-cart {
-    width: 30px;
-    height: 30px;
-}
-.icon-heart {
+.social-list a {
     width: 24px;
     height: 24px;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
 }
-/* Показываем иконки при наведении */
-.product-card:hover .product-icons {
-    opacity: 1;
+.footer-col img {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
 }
+.payments {
+    display: flex;
+    gap: 10px;
+}
+.payments .sprite {
+    background: url('../images/payment.png') no-repeat;
+    display: inline-block;
+    width: 56px;
+    height: 26px;
+    background-size: 224px 26px;
+}
+.payments .sprite.paypal { background-position: 0 0; }
+.payments .sprite.mastercard { background-position: -56px 0; }
+.payments .sprite.visa { background-position: -112px 0; }
+.payments .sprite.amex { background-position: -168px 0; }
 
-/* Стили для скидки */
-.discount-badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: #46A358;
-    color: white;
-    padding: 5px 10px;
+.footer-bottom {
+    background-color: transparent;
+    padding: 5px 0;
+    text-align: center;
     font-size: 14px;
-    font-weight: bold;
-    border-radius: 5px;
+    color: #777;
 }
-
-/* Стили для старой цены */
-.old-price {
-    color: gray;
-    text-decoration: line-through;
-    font-size: 14px;
-    margin-left: 5px;
-}
->>>>>>> Stashed changes
